@@ -1,0 +1,52 @@
+﻿@page
+@model Task5.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Employee.Fname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Middle Initial</label>
+        <input asp-for="Employee.Minit" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input asp-for="Employee.Lname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>SSN</label>
+        <input class="form-control" disabled value="@Model.Employee.ssn" />
+        <input type="hidden" asp-for="Employee.ssn" /> <!-- Add this hidden input to include the SSN in the model binding -->
+    </div>
+    <div class="form-group">
+        <label>Birth Date</label>
+        <input asp-for="Employee.Bdate" class="form-control" asp-format="{0:yyyy-MM-dd}" />
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Employee.Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Sex</label>
+        <input asp-for="Employee.Sex" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input asp-for="Employee.Salary" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Supervisor SSN</label>
+        <input asp-for="Employee.Super_ssn" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Department Number</label>
+        <input asp-for="Employee.Dnumber" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>

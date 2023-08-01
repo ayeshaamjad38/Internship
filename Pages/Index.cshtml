@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Razor Pages</h1>
+</div>
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <a asp-page="Create" class="btn btn-success">Add Employee</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SSN</th>
+            <th>Name</th>
+            <th>Department Number</th>
+            <th>Supervisor SSN</th>
+            <th>Salary</th>
+            <th>Sex</th>
+            <th>Birthdate</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.Employees)
+        {
+            <tr>
+                <td>@employee.ssn</td>
+                <td>@employee.Fname @employee.Minit @employee.Lname</td>
+                <td>@employee.Dnumber</td>
+                <td>@employee.Super_ssn</td>
+                <td>@employee.Salary</td>
+                <td>@employee.Sex</td>
+                <td>@employee.Bdate</td>
+                <td>@employee.Address</td>
+                <td>
+                    <a asp-page="Edit" asp-route-ssn="@employee.ssn" class="btn btn-warning">Update</a>
+                    <a asp-page="Delete" asp-route-ssn="@employee.ssn" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
