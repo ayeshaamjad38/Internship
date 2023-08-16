@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Malik Amjad Bashir\\Desktop\\Task5\\Task5.csproj": {}
+    "D:\\Ayesha\\Internship Tasks\\Task5\\Task5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Malik Amjad Bashir\\Desktop\\Task5\\Task5.csproj": {
+    "D:\\Ayesha\\Internship Tasks\\Task5\\Task5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Malik Amjad Bashir\\Desktop\\Task5\\Task5.csproj",
+        "projectUniqueName": "D:\\Ayesha\\Internship Tasks\\Task5\\Task5.csproj",
         "projectName": "Task5",
-        "projectPath": "C:\\Users\\Malik Amjad Bashir\\Desktop\\Task5\\Task5.csproj",
+        "projectPath": "D:\\Ayesha\\Internship Tasks\\Task5\\Task5.csproj",
         "packagesPath": "C:\\Users\\Malik Amjad Bashir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Malik Amjad Bashir\\Desktop\\Task5\\obj\\",
+        "outputPath": "D:\\Ayesha\\Internship Tasks\\Task5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Malik Amjad Bashir\\AppData\\Roaming\\NuGet\\NuGet.Config",

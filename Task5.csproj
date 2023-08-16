@@ -7,6 +7,44 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\build\js\custom.js" />
+    <None Include="wwwroot\build\js\custom.min.js" />
+    <None Include="wwwroot\docs\fonts\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\docs\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\docs\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\docs\fonts\less\bordered-pulled.less" />
+    <None Include="wwwroot\docs\fonts\less\core.less" />
+    <None Include="wwwroot\docs\fonts\less\fixed-width.less" />
+    <None Include="wwwroot\docs\fonts\less\font-awesome.less" />
+    <None Include="wwwroot\docs\fonts\less\icons.less" />
+    <None Include="wwwroot\docs\fonts\less\larger.less" />
+    <None Include="wwwroot\docs\fonts\less\list.less" />
+    <None Include="wwwroot\docs\fonts\less\mixins.less" />
+    <None Include="wwwroot\docs\fonts\less\path.less" />
+    <None Include="wwwroot\docs\fonts\less\rotated-flipped.less" />
+    <None Include="wwwroot\docs\fonts\less\spinning.less" />
+    <None Include="wwwroot\docs\fonts\less\stacked.less" />
+    <None Include="wwwroot\docs\fonts\less\variables.less" />
+    <None Include="wwwroot\docs\fonts\scss\font-awesome.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_core.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_fixed-width.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_icons.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_larger.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_list.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_mixins.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_path.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_spinning.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_stacked.scss" />
+    <None Include="wwwroot\docs\fonts\scss\_variables.scss" />
+    <None Include="wwwroot\docs\js\bootstrap.min.js" />
+    <None Include="wwwroot\docs\js\jquery.min.js" />
+    <None Include="wwwroot\docs\js\shBrushXml.js" />
+    <None Include="wwwroot\docs\js\shCore.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
   </ItemGroup>
 
