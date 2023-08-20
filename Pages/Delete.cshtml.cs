@@ -37,7 +37,8 @@ namespace Task5.Pages
 
             _context.Employee.Remove(employeeToDelete);
             _context.SaveChanges();
-
+            
+            TempData["AlertScript"] = "Swal.fire('Success!', 'Employee Deleted Successfully', 'success');";
             return RedirectToPage("Index");
         }
     }

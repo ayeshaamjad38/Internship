@@ -43,6 +43,7 @@ namespace Task5.Pages
 
             _context.Attach(Employee).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
+            TempData["AlertScript"] = "Swal.fire('Success!', 'Employee Updated Successfully', 'success');";
 
             return RedirectToPage("Index");
         }

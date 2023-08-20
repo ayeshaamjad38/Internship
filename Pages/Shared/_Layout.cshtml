@@ -25,13 +25,13 @@
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" >
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -747,8 +747,10 @@
     <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
+
         $.widget.bridge('uibutton', $.ui.button)
     </script>
+   
     <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
@@ -779,5 +781,14 @@
     
 
     @await RenderSectionAsync("Scripts", required: false)
+    @if (TempData.ContainsKey("AlertScript"))
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            @Html.Raw(TempData["AlertScript"])
+                    });
+        </script>
+    }
+
 </body>
 </html>

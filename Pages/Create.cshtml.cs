@@ -34,7 +34,7 @@ namespace Task5.Pages
 
             _context.Employee.Add(Employee);
             _context.SaveChanges();
-
+            TempData["AlertScript"] = "Swal.fire('Success!', 'Employee Added Successfully', 'success');";
             return RedirectToPage("Index");
         }
     }

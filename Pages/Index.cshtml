@@ -3,7 +3,36 @@
 @{
     ViewData["Title"] = "Employee List";
 }
-
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function showDeleteConfirmation(ssn) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You are about to delete an employee.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // User clicked 'Yes', perform delete action or show success message
+                    Swal.fire({
+                        title: 'Employee Deleted',
+                        text: 'Employee deleted successfully.',
+                        icon: 'success'
+                    });
+                    
+                } else {
+                   
+                    Swal.fire('No Employee Deleted', '', 'info');
+                }
+            });
+        }
+    </script>
+}
 <div class="text-center">
     <h1 class="display-4">Razor Pages</h1>
 </div>
@@ -41,7 +70,12 @@
                 <td>@employee.Address</td>
                 <td>
                     <a asp-page="Edit" asp-route-ssn="@employee.ssn" class="btn btn-warning" style="background-color: green; color: white;">Update</a>
-                    <a asp-page="Delete" asp-route-ssn="@employee.ssn" class="btn btn-danger" style="background-color: green; color: white;">Delete</a>
+                    
+    <button class="btn btn-danger" style="background-color: green; color: white;"
+            onclick="showDeleteConfirmation('@employee.ssn')">
+        Delete
+    </button>
+
                 </td>
             </tr>
         }
